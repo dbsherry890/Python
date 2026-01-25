@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" class="sm:scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dan's Flask App'</title>
+    <link
+      href="{{url_for('static',filename='css/output.css')}}"
+      rel="stylesheet"
+    />
+    <script src="static/js/main.js" defer></script>
+  </head>
+  <body class="min-h-screen bg-slate-50">
+    <header class="bg-teal-700 text-white sticky top-0 z-10">
+      <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+        <h1 class="text-3xl font-medium">
+          <a href="#hero">Dan's Flask Website 🔥🔥</a>
+        </h1>
+        <div>
+          <button
+            id="hamburger-btn"
+            class="relative h-8 md:hidden w-8 cursor-pointer text-3xl text-pink-300"
+          >
+            <!-- &#9776; -->
+            <div
+              class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']"
+            ></div>
+          </button>
+          <nav class="hidden md:block space-x-8 text-xl" aria-label="main">
+            <a href="#features" class="hover:opacity-90">Features</a>
+            <a href="#references" class="hover:opacity-90">References</a>
+          </nav>
+        </div>
+      </section>
+      <section
+        id="mobile-menu"
+        class="absolute top-68 bg-black w-full text-5xl flex-col justify-content-center origin-top animate-open-menu hidden"
+      >
+        <!-- <button class="text-8xl self-end px-6">&times;</button> -->
+        <nav
+          class="flex flex-col min-h-screen items-center py-8"
+          aria-label="mobile"
+        >
+          <a href="#hero" class="w-full text-center py-6 hover:opacity-90"
+            >Home</a
+          >
+          <a href="#features" class="w-full text-center py-6 hover:opacity-90"
+            >Features</a
+          >
+          <a href="#references" class="w-full text-center py-6 hover:opacity-90"
+            >References</a
+          >
+        </nav>
+      </section>
+    </header>
+    <main class="max-w-4xl mx-auto">
+      <section
+        id="hero"
+        class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-20 widescreen:section-min-height tallscreen: section-min-height"
+      >
+        <article class="sm:w-1/2">
+          <h2
+            class="max-w-md text-4xl font-bold text-center sm:text-5xl sm:text-left text-slate-900"
+          >
+            We out here making <span class="text-indigo-500">websites</span> yuh
+          </h2>
+          <p
+            class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700"
+          >
+            This a Flask website
+          </p>
+          <p
+            class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700"
+          >
+            Ya boy out here trying to learn TailWindCSS
+          </p>
+          <p
+            class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700"
+          >
+            Really wish I mapped the caps lock to ctrl before coding this.
+          </p>
+        </article>
+        <img
+          class="w-1/2"
+          src="./static/images/flask_logo.png"
+          alt="Flask logo"
+        />
+      </section>
+
+      <hr class="mx-auto bg-black w-1/2 h-0.5" />
+
+      <section
+        id="features"
+        class="p-6 my-12 widescreen:section-min-height tallscreen: section-min-height"
+      >
+        <h2
+          class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900"
+        >
+          Some awesome features
+        </h2>
+        <ul
+          class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center justify-center"
+        >
+          <li
+            class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 bg-white py-6 px-2 rounded-3xl shadow-xl"
+          >
+            <img src="static/images/sqllite.jpeg" alt="SQLite3" class="w-1/2" />
+          </li>
+        </ul>
+      </section>
+
+      <hr class="mx-auto bg-black w-1/2 h-0.5" />
+
+      <section
+        id="references"
+        class="p-6 my-12 widescreen:section-min-height tallscreen: section-min-height"
+      >
+        <h2
+          class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900"
+        >
+          Some awesome references
+        </h2>
+        <figure class="my-12">
+          <blockquote class="bg-teal-600 pl-14 pr-8 py-12 rounded-3xl relative">
+            <p
+              class="text-2xl sm:text-3xl text-left mt-2 text-white before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2"
+            >
+              Insert here some websites or businesses that have used Flask
+            </p>
+            <figcaption
+              class="italic text-xl sm:text-2xl text-right mt-2 text-slate-300"
+            >
+              &#8212;Dan Sherry
+            </figcaption>
+          </blockquote>
+        </figure>
+      </section>
+    </main>
+
+    <footer id="footer" class="bg-teal-700 text-white text-xl">
+      <section
+        class="max-w-5xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between"
+      >
+        <address>
+          <h2>Dan's Website</h2>
+          The coolest Flask app ever<br />
+          <p>Anytown, USA</p>
+          Email: <a href="mailto:dbsherry@gmail.com">dbsherry@gmail.com</a
+          ><br />
+        </address>
+        <nav class="hidden md:flex flex-col gap-2" aria-label="footer">
+          <a href="#features" class="hover:opacity-90">Features</a>
+          <a href="#references" class="hover:opacity-90">References</a>
+        </nav>
+        <div class="flex flex-col sm:gap-2">
+          <p class="text-right">Copyright &copy; <span id="year">2024</span></p>
+          <p class="text-right">All Rights Reserved</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

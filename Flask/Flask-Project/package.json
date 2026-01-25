@@ -1,0 +1,13 @@
+{
+  "main": "tailwind.config.js",
+  "dependencies": {
+    "tailwindcss": "^3.4.15"
+  },
+  "scripts": {
+    "buildcss": "npx tailwindcss -i ./website/static/css/input.css -o ./website/static/css/output.css --watch",
+    "prettier": "npx prettier --write website/templates/*.html"
+  },
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.6.9"
+  }
+}

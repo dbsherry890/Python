@@ -1,0 +1,6 @@
+{% extends 'myapp/base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'myapp/style.css' %}" />
+{% endblock %} {% block content %}
+<!-- Edit the <p> element below -->
+<p>Welcome, {{ name }}!</p>
+{% endblock %}
