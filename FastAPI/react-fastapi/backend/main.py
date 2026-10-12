@@ -1,3 +1,4 @@
+from os import name
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,18 +16,17 @@ class Gifts(BaseModel):
 
 app = FastAPI()
 
-origins = [
-    "http://localhost:5173"
-]
+origins = ["http://localhost:5173"]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
-    allow_headers=["*"],)
+    allow_headers=["*"],
+)
 
-memory_db = {"gifts": []}
+memory_db = {"gifts": [Gift(name="snowboard"), Gift(name="other thing")]}
 
 
 @app.get("/gifts", response_model=Gifts)
